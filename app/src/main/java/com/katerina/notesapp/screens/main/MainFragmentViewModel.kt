@@ -6,4 +6,8 @@ import com.katerina.notesapp.utilities.REPOSITORY
 
 class MainFragmentViewModel(application: Application): AndroidViewModel(application) {
     val allNotes = REPOSITORY.allNotes
+
+    fun signOut() {
+        REPOSITORY.signOut()
+    }
 }
