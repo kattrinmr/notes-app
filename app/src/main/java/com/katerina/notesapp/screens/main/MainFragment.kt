@@ -10,6 +10,7 @@ import com.katerina.notesapp.R
 import com.katerina.notesapp.databinding.FragmentMainBinding
 import com.katerina.notesapp.models.AppNote
 import com.katerina.notesapp.utilities.APP_ACTIVITY
+import com.katerina.notesapp.utilities.AppPreference
 
 class MainFragment : Fragment() {
 
@@ -69,6 +70,7 @@ class MainFragment : Fragment() {
         when (item.itemId) {
             R.id.btn_exit -> {
                 mViewModel.signOut()
+                AppPreference.setInitUser(false)
                 APP_ACTIVITY.navController.navigate(R.id.action_mainFragment_to_startFragment)
             }
         }

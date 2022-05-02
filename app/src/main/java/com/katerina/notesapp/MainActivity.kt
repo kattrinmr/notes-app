@@ -7,6 +7,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.katerina.notesapp.databinding.ActivityMainBinding
 import com.katerina.notesapp.utilities.APP_ACTIVITY
+import com.katerina.notesapp.utilities.AppPreference
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,12 +22,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(mBinding.root)
 
         APP_ACTIVITY = this
+        AppPreference.getPreference(this)
 
         mToolbar = mBinding.toolbar
         navController = Navigation.findNavController(this, R.id.nav_host_fragment)
 
         setSupportActionBar(mToolbar)
         title = getString(R.string.title)
+
     }
 
     override fun onDestroy() {
