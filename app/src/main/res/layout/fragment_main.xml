@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".screens.main.MainFragment">
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
@@ -21,6 +22,7 @@
         android:id="@+id/btn_add_note"
         android:src="@drawable/ic_add"
         app:tint="@color/white"
+        android:backgroundTint="@color/md_theme_light_primary"
         android:clickable="true"
         android:focusable="true"
         android:layout_width="wrap_content"
